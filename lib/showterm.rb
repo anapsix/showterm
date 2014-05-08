@@ -134,6 +134,7 @@ module Showterm
     args << '-c' + cmd.join(" ") if cmd.size > 0
     args << '-q'
     args << '-t'
+    args << '-f'
     args << scriptfile.path
 
     "#{args.map{ |x| Shellwords.escape(x) }.join(" ")} 2>#{Shellwords.escape(timingfile.path)}"
