@@ -16,7 +16,7 @@ timesent = Time.now - interval * 2
 file = File.open(pipe_path)
 
 
-while (true) do
+loop do
 
   begin
     buff << file.readpartial(4096)

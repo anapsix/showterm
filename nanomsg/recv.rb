@@ -9,7 +9,7 @@ puts "Listening on #{bind_address}.."
 socket = NanoMsg::PullSocket.new
 socket.bind(bind_address)
 
-while (true) do
+loop do
   recv = socket.recv
   if recv =~ /!done!/
     puts "Received server termination command, exiting.."
